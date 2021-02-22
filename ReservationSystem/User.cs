@@ -24,23 +24,26 @@ namespace ReservationSystem
         public static int ID { get; set; }
         public static string Name { get; set; }
         public static string FirstName { get; set; }
-        public static string  LastName { get; set; }
-        public static string  Number { get; set; }
+        public static string LastName { get; set; }
+        public static string Number { get; set; }
         public static string Sex { get; set; }
         public static DateTime Birthdate { get; set; }
-        public static string  Email { get; set; }
+        public static string Email { get; set; }
         public static string Type { get; set; }
 
         public static bool GetUser(string username, string password)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT COUNT(*) FROM user WHERE (user.userName = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userEmail = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userNumber = '"+username+"' AND user.userPassword = '"+password+"');", connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT COUNT(*) FROM user WHERE (user.userName = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userEmail = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userNumber = '" + username + "' AND user.userPassword = '" + password + "');", connection);
             DataTable data = new DataTable();
             adapter.Fill(data);
             int count = int.Parse(data.Rows[0][0].ToString());
 
             if (count == 1)
             {
-                MySqlDataAdapter adapterGetUser = new MySqlDataAdapter("SELECT user.userID, user.userName, user.userFirstName, user.userLastName, user.userNumber, user.userSex, user.userBirthdate, user.userEmail, user.userType FROM user WHERE (user.userName = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userEmail = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userNumber = '"+username+"' AND user.userPassword = '"+password+"');", connection);
+                MySqlDataAdapter adapterGetUser = new MySqlDataAdapter("SELECT user.userID, user.userName, user.userFirstName, user.userLastName, " +
+                    "user.userNumber, user.userSex, user.userBirthdate, user.userEmail, user.userType FROM user WHERE (user." +
+                    "userName = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userEmail = '" + username + "' AND user.userPas" +
+                    "sword = '" + password + "') OR (user.userNumber = '" + username + "' AND user.userPassword = '" + password + "');", connection);
                 DataTable user = new DataTable();
                 adapterGetUser.Fill(user);
 
@@ -55,9 +58,11 @@ namespace ReservationSystem
                 Type = user.Rows[0][8].ToString();
 
                 return true;
-            } else
+            }
+            else
             {
                 return false;
+
             }
         }
     }

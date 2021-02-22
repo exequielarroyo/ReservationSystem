@@ -32,12 +32,16 @@ namespace ReservationSystem
             this.UserNameTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.PasswordTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.LogInButton = new Guna.UI.WinForms.GunaButton();
+<<<<<<< HEAD
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).BeginInit();
+=======
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+>>>>>>> 0b3cefdf403e66590c173c473a327c6cd06b4064
             this.SuspendLayout();
             // 
             // UserNameTextBox
@@ -97,7 +101,11 @@ namespace ReservationSystem
             this.LogInButton.ForeColor = System.Drawing.Color.White;
             this.LogInButton.Image = null;
             this.LogInButton.ImageSize = new System.Drawing.Size(20, 20);
+<<<<<<< HEAD
             this.LogInButton.Location = new System.Drawing.Point(447, 221);
+=======
+            this.LogInButton.Location = new System.Drawing.Point(304, 151);
+>>>>>>> 0b3cefdf403e66590c173c473a327c6cd06b4064
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(163)))), ((int)(((byte)(243)))));
             this.LogInButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -111,6 +119,7 @@ namespace ReservationSystem
             this.LogInButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
+<<<<<<< HEAD
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -165,6 +174,14 @@ namespace ReservationSystem
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Recover password";
+=======
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(547, 207);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(8, 8);
+            this.progressBar1.TabIndex = 4;
+>>>>>>> 0b3cefdf403e66590c173c473a327c6cd06b4064
             // 
             // LoginForm
             // 
@@ -172,11 +189,15 @@ namespace ReservationSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(807, 424);
+<<<<<<< HEAD
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaTransfarantPictureBox1);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
+=======
+            this.Controls.Add(this.progressBar1);
+>>>>>>> 0b3cefdf403e66590c173c473a327c6cd06b4064
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
@@ -194,11 +215,15 @@ namespace ReservationSystem
         private Guna.UI.WinForms.GunaTextBox UserNameTextBox;
         private Guna.UI.WinForms.GunaTextBox PasswordTextBox;
         private Guna.UI.WinForms.GunaButton LogInButton;
+<<<<<<< HEAD
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaTransfarantPictureBox gunaTransfarantPictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.Label label1;
+=======
+        private System.Windows.Forms.ProgressBar progressBar1;
+>>>>>>> 0b3cefdf403e66590c173c473a327c6cd06b4064
     }
 }
 
