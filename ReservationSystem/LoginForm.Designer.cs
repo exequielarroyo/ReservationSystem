@@ -34,9 +34,10 @@ namespace ReservationSystem
             this.LogInButton = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.RegisterLink = new Guna.UI.WinForms.GunaLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
+            this.createAccountUC1 = new ReservationSystem.CreateAccountUC();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,29 +132,18 @@ namespace ReservationSystem
             this.gunaLabel2.TabIndex = 4;
             this.gunaLabel2.Text = "If you don\'t have account\r\nYou can";
             // 
-            // gunaTransfarantPictureBox1
+            // RegisterLink
             // 
-            this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black;
-            this.gunaTransfarantPictureBox1.Image = global::ReservationSystem.Properties.Resources.sys1;
-            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(12, 324);
-            this.gunaTransfarantPictureBox1.Name = "gunaTransfarantPictureBox1";
-            this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(122, 88);
-            this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaTransfarantPictureBox1.TabIndex = 6;
-            this.gunaTransfarantPictureBox1.TabStop = false;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(188, 240);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(87, 15);
-            this.gunaLabel3.TabIndex = 7;
-            this.gunaLabel3.Text = "Register here!";
+            this.RegisterLink.AutoSize = true;
+            this.RegisterLink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegisterLink.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.RegisterLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.RegisterLink.Location = new System.Drawing.Point(188, 240);
+            this.RegisterLink.Name = "RegisterLink";
+            this.RegisterLink.Size = new System.Drawing.Size(87, 15);
+            this.RegisterLink.TabIndex = 7;
+            this.RegisterLink.Text = "Register here!";
+            this.RegisterLink.Click += new System.EventHandler(this.RegisterLink_Click);
             // 
             // label1
             // 
@@ -166,14 +156,37 @@ namespace ReservationSystem
             this.label1.TabIndex = 8;
             this.label1.Text = "Recover password";
             // 
+            // gunaTransfarantPictureBox1
+            // 
+            this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black;
+            this.gunaTransfarantPictureBox1.Image = global::ReservationSystem.Properties.Resources.sys1;
+            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(12, 324);
+            this.gunaTransfarantPictureBox1.Name = "gunaTransfarantPictureBox1";
+            this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(122, 88);
+            this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaTransfarantPictureBox1.TabIndex = 6;
+            this.gunaTransfarantPictureBox1.TabStop = false;
+            // 
+            // createAccountUC1
+            // 
+            this.createAccountUC1.BackColor = System.Drawing.Color.Transparent;
+            this.createAccountUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createAccountUC1.Location = new System.Drawing.Point(0, 0);
+            this.createAccountUC1.Name = "createAccountUC1";
+            this.createAccountUC1.Size = new System.Drawing.Size(807, 424);
+            this.createAccountUC1.TabIndex = 9;
+            this.createAccountUC1.Visible = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(807, 424);
+            this.Controls.Add(this.createAccountUC1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gunaLabel3);
+            this.Controls.Add(this.RegisterLink);
             this.Controls.Add(this.gunaTransfarantPictureBox1);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
@@ -182,7 +195,7 @@ namespace ReservationSystem
             this.Controls.Add(this.UserNameTextBox);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Reservation System";
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,8 +210,9 @@ namespace ReservationSystem
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaTransfarantPictureBox gunaTransfarantPictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel RegisterLink;
         private System.Windows.Forms.Label label1;
+        private CreateAccountUC createAccountUC1;
     }
 }
 

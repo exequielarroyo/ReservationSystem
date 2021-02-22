@@ -25,3 +25,4 @@ D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\Res
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.csproj.CopyComplete
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\bin\Debug\Guna.UI.dll
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.MainForm.resources
+D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.CreateAccountUC.resources

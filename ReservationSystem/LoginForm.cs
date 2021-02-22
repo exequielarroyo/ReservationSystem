@@ -27,5 +27,10 @@ namespace ReservationSystem
                 mainForm.Show();
             }
         }
+
+        private void RegisterLink_Click(object sender, EventArgs e)
+        {
+            createAccountUC1.Visible = true;
+        }
     }
 }
