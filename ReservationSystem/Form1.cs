@@ -17,14 +17,15 @@ namespace ReservationSystem
         {
             InitializeComponent();
         }
-        
-        MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;database=reservationsystem");
+
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text);
-            MainForm mainForm = new MainForm();
-            this.Hide();
-            mainForm.Show();
+            if(User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
+            {
+                MainForm mainForm = new MainForm();
+                this.Hide();
+                mainForm.Show();
+            }
         }
     }
 }

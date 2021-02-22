@@ -31,7 +31,7 @@ namespace ReservationSystem
         public static string  Email { get; set; }
         public static string Type { get; set; }
 
-        public static void GetUser(string username, string password)
+        public static bool GetUser(string username, string password)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT COUNT(*) FROM user WHERE (user.userName = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userEmail = '"+username+"' AND user.userPassword = '"+password+"') OR (user.userNumber = '"+username+"' AND user.userPassword = '"+password+"');", connection);
             DataTable data = new DataTable();
@@ -53,6 +53,11 @@ namespace ReservationSystem
                 Birthdate = Convert.ToDateTime(user.Rows[0][6].ToString());
                 Email = user.Rows[0][7].ToString();
                 Type = user.Rows[0][8].ToString();
+
+                return true;
+            } else
+            {
+                return false;
             }
         }
     }
