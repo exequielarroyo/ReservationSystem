@@ -33,6 +33,7 @@ namespace ReservationSystem
             this.UserNameTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.PasswordTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.LogInButton = new Guna.UI.WinForms.GunaButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // UserNameTextBox
@@ -82,7 +83,7 @@ namespace ReservationSystem
             this.LogInButton.ForeColor = System.Drawing.Color.White;
             this.LogInButton.Image = ((System.Drawing.Image)(resources.GetObject("LogInButton.Image")));
             this.LogInButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.LogInButton.Location = new System.Drawing.Point(343, 151);
+            this.LogInButton.Location = new System.Drawing.Point(304, 151);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.LogInButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -95,11 +96,19 @@ namespace ReservationSystem
             this.LogInButton.Text = "Sign in";
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(547, 207);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(8, 8);
+            this.progressBar1.TabIndex = 4;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 424);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
@@ -115,6 +124,7 @@ namespace ReservationSystem
         private Guna.UI.WinForms.GunaTextBox UserNameTextBox;
         private Guna.UI.WinForms.GunaTextBox PasswordTextBox;
         private Guna.UI.WinForms.GunaButton LogInButton;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
