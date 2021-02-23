@@ -84,6 +84,7 @@ namespace ReservationSystem
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.Text = "password";
             this.PasswordTextBox.TextOffsetX = 10;
+            this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPress);
             // 
             // LogInButton
             // 

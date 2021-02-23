@@ -20,6 +20,10 @@ namespace ReservationSystem
         private void CreateAccountButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            if (NumberTextBox.Text != "Mobile or phone number")
+            {
+                Database.Command("INSERT INTO USER(userName, userPassword,userFirstName, userLastName, userNumber, userSex, userBirthdate, userEmail, userType) VALUE('" + UserNameTextBox.Text + "', '" + PasswordTextBox.Text + "', '" + FirstnameTextBox.Text + "', '" + LastnameTextBox.Text + "', '" + NumberTextBox.Text + "', '" + SexComboBox.Text + "', '" + BirthdatePicker.Text + "', '" + EmailTextBox.Text + "', '" + "Customer" + "');");
+            }
         }
     }
 }

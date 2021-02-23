@@ -20,17 +20,32 @@ namespace ReservationSystem
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            if(User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
+            if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
             {
-                MainForm mainForm = new MainForm();
                 this.Hide();
-                mainForm.Show();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                this.Close();
             }
         }
 
         private void RegisterLink_Click(object sender, EventArgs e)
         {
             createAccountUC1.Visible = true;
+        }
+
+        private void PasswordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
+                {
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }
