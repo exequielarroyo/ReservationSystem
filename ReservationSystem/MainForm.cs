@@ -86,17 +86,10 @@ namespace ReservationSystem
 
         private void FirstNameTextBox_Click(object sender, EventArgs e)
         {
-            if (gunaPanel1.Visible)
-                gunaPanel1.Visible = false;
+            if (SignoutPanel.Visible)
+                SignoutPanel.Visible = false;
             else
-                gunaPanel1.Visible = true;
-        }
-
-        private void FirstNameTextBox_LocationChanged(object sender, EventArgs e)
-        {
-            Point label = FirstNameTextBox.Location;
-            gunaPanel1.Location = new Point(label.X - 100, label.Y + 30);
-
+                SignoutPanel.Visible = true;
         }
     }
 }

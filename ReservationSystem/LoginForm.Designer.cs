@@ -29,6 +29,7 @@ namespace ReservationSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.UserNameTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.PasswordTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.LogInButton = new Guna.UI.WinForms.GunaButton();
@@ -171,10 +172,10 @@ namespace ReservationSystem
             // 
             this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTransfarantPictureBox1.BaseColor = System.Drawing.Color.Black;
-            this.gunaTransfarantPictureBox1.Image = global::ReservationSystem.Properties.Resources.sys1;
-            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(12, 324);
+            this.gunaTransfarantPictureBox1.Image = global::ReservationSystem.Properties.Resources.Asset_1a;
+            this.gunaTransfarantPictureBox1.Location = new System.Drawing.Point(12, 335);
             this.gunaTransfarantPictureBox1.Name = "gunaTransfarantPictureBox1";
-            this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(122, 88);
+            this.gunaTransfarantPictureBox1.Size = new System.Drawing.Size(89, 67);
             this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaTransfarantPictureBox1.TabIndex = 6;
             this.gunaTransfarantPictureBox1.TabStop = false;
@@ -183,7 +184,7 @@ namespace ReservationSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(807, 424);
             this.Controls.Add(this.createAccountUC1);
             this.Controls.Add(this.label1);
@@ -194,6 +195,7 @@ namespace ReservationSystem
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation System";

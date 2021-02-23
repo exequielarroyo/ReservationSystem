@@ -119,5 +119,29 @@
   <ItemGroup>
     <None Include="Pictures\R659c780bf2f1f39858dd05c7e022ddb8.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\pose_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\icons8-infinity-gauntlet-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\icons8-plus-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\icons8-box-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\icons8-remove-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\icons8-sign-out-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Asset 1a.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
