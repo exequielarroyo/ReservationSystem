@@ -218,6 +218,7 @@ namespace ReservationSystem
             this.SexComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
             this.SexComboBox.BorderColor = System.Drawing.Color.Silver;
             this.SexComboBox.BorderSize = 0;
+            this.SexComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SexComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.SexComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SexComboBox.FocusedColor = System.Drawing.Color.Empty;
@@ -253,7 +254,7 @@ namespace ReservationSystem
             this.BirthdatePicker.Name = "BirthdatePicker";
             this.BirthdatePicker.OnHoverBaseColor = System.Drawing.Color.White;
             this.BirthdatePicker.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
-            this.BirthdatePicker.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.BirthdatePicker.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.BirthdatePicker.OnPressedColor = System.Drawing.Color.Black;
             this.BirthdatePicker.Radius = 10;
             this.BirthdatePicker.Size = new System.Drawing.Size(119, 26);

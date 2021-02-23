@@ -36,7 +36,7 @@ namespace ReservationSystem
             // 
             this.FirstNameTextBox.AutoSize = true;
             this.FirstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FirstNameTextBox.Location = new System.Drawing.Point(673, 9);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(416, 131);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(68, 15);
             this.FirstNameTextBox.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace ReservationSystem
             this.Controls.Add(this.FirstNameTextBox);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Reservation System";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
