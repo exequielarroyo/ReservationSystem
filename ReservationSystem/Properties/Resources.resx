@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sys1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pictures\sys1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bubble_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pictures\bubble_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sys1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Pictures\sys1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="R659c780bf2f1f39858dd05c7e022ddb8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pictures\R659c780bf2f1f39858dd05c7e022ddb8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

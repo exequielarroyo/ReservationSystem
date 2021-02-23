@@ -26,3 +26,4 @@ D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\bin\Debug\Gun
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.MainForm.resources
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.CreateAccountUC.resources
 D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\obj\Debug\ReservationSystem.csprojAssemblyReference.cache
+D:\Sy 2020-2021\Programming\c#\ReservationSystem\ReservationSystem\bin\Debug\Guna.UI2.dll

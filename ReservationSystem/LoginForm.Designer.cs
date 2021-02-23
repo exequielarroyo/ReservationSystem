@@ -36,8 +36,8 @@ namespace ReservationSystem
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.RegisterLink = new Guna.UI.WinForms.GunaLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             this.createAccountUC1 = new ReservationSystem.CreateAccountUC();
+            this.gunaTransfarantPictureBox1 = new Guna.UI.WinForms.GunaTransfarantPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaTransfarantPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@ namespace ReservationSystem
             this.UserNameTextBox.SelectedText = "";
             this.UserNameTextBox.Size = new System.Drawing.Size(243, 48);
             this.UserNameTextBox.TabIndex = 0;
-            this.UserNameTextBox.Text = "username , email, or number";
+            this.UserNameTextBox.Text = "username123";
             this.UserNameTextBox.TextOffsetX = 10;
             // 
             // PasswordTextBox
@@ -82,7 +82,7 @@ namespace ReservationSystem
             this.PasswordTextBox.SelectedText = "";
             this.PasswordTextBox.Size = new System.Drawing.Size(243, 48);
             this.PasswordTextBox.TabIndex = 1;
-            this.PasswordTextBox.Text = "password";
+            this.PasswordTextBox.Text = "1233";
             this.PasswordTextBox.TextOffsetX = 10;
             this.PasswordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PasswordTextBox_KeyPress);
             // 
@@ -157,6 +157,16 @@ namespace ReservationSystem
             this.label1.TabIndex = 8;
             this.label1.Text = "Recover password";
             // 
+            // createAccountUC1
+            // 
+            this.createAccountUC1.BackColor = System.Drawing.Color.Transparent;
+            this.createAccountUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createAccountUC1.Location = new System.Drawing.Point(0, 0);
+            this.createAccountUC1.Name = "createAccountUC1";
+            this.createAccountUC1.Size = new System.Drawing.Size(807, 424);
+            this.createAccountUC1.TabIndex = 9;
+            this.createAccountUC1.Visible = false;
+            // 
             // gunaTransfarantPictureBox1
             // 
             this.gunaTransfarantPictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -168,16 +178,6 @@ namespace ReservationSystem
             this.gunaTransfarantPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaTransfarantPictureBox1.TabIndex = 6;
             this.gunaTransfarantPictureBox1.TabStop = false;
-            // 
-            // createAccountUC1
-            // 
-            this.createAccountUC1.BackColor = System.Drawing.Color.Transparent;
-            this.createAccountUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createAccountUC1.Location = new System.Drawing.Point(0, 0);
-            this.createAccountUC1.Name = "createAccountUC1";
-            this.createAccountUC1.Size = new System.Drawing.Size(807, 424);
-            this.createAccountUC1.TabIndex = 9;
-            this.createAccountUC1.Visible = false;
             // 
             // LoginForm
             // 
