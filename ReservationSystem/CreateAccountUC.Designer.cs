@@ -40,6 +40,8 @@ namespace ReservationSystem
             this.SexComboBox = new Guna.UI.WinForms.GunaComboBox();
             this.BirthdatePicker = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.TypeComboBox = new Guna.UI.WinForms.GunaComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +49,7 @@ namespace ReservationSystem
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(308, 318);
+            this.label1.Location = new System.Drawing.Point(308, 300);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 12;
@@ -66,7 +68,7 @@ namespace ReservationSystem
             this.CreateAccountButton.ForeColor = System.Drawing.Color.White;
             this.CreateAccountButton.Image = null;
             this.CreateAccountButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.CreateAccountButton.Location = new System.Drawing.Point(299, 364);
+            this.CreateAccountButton.Location = new System.Drawing.Point(299, 371);
             this.CreateAccountButton.Name = "CreateAccountButton";
             this.CreateAccountButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(163)))), ((int)(((byte)(243)))));
             this.CreateAccountButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -92,7 +94,7 @@ namespace ReservationSystem
             this.EmailTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.EmailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.EmailTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.EmailTextBox.Location = new System.Drawing.Point(299, 127);
+            this.EmailTextBox.Location = new System.Drawing.Point(299, 109);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.PasswordChar = '\0';
             this.EmailTextBox.Radius = 10;
@@ -114,7 +116,7 @@ namespace ReservationSystem
             this.FirstnameTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.FirstnameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FirstnameTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.FirstnameTextBox.Location = new System.Drawing.Point(299, 73);
+            this.FirstnameTextBox.Location = new System.Drawing.Point(299, 55);
             this.FirstnameTextBox.Name = "FirstnameTextBox";
             this.FirstnameTextBox.PasswordChar = '\0';
             this.FirstnameTextBox.Radius = 10;
@@ -136,7 +138,7 @@ namespace ReservationSystem
             this.UserNameTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.UserNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.UserNameTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.UserNameTextBox.Location = new System.Drawing.Point(299, 19);
+            this.UserNameTextBox.Location = new System.Drawing.Point(299, 1);
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.PasswordChar = '\0';
             this.UserNameTextBox.Radius = 10;
@@ -158,7 +160,7 @@ namespace ReservationSystem
             this.LastnameTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.LastnameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LastnameTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LastnameTextBox.Location = new System.Drawing.Point(424, 73);
+            this.LastnameTextBox.Location = new System.Drawing.Point(424, 55);
             this.LastnameTextBox.Name = "LastnameTextBox";
             this.LastnameTextBox.PasswordChar = '\0';
             this.LastnameTextBox.Radius = 10;
@@ -180,7 +182,7 @@ namespace ReservationSystem
             this.PasswordTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.PasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.PasswordTextBox.Location = new System.Drawing.Point(299, 181);
+            this.PasswordTextBox.Location = new System.Drawing.Point(299, 163);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '\0';
             this.PasswordTextBox.Radius = 10;
@@ -202,7 +204,7 @@ namespace ReservationSystem
             this.NumberTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.NumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NumberTextBox.Location = new System.Drawing.Point(299, 235);
+            this.NumberTextBox.Location = new System.Drawing.Point(299, 217);
             this.NumberTextBox.Name = "NumberTextBox";
             this.NumberTextBox.PasswordChar = '\0';
             this.NumberTextBox.Radius = 10;
@@ -228,7 +230,7 @@ namespace ReservationSystem
             this.SexComboBox.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.SexComboBox.Location = new System.Drawing.Point(424, 289);
+            this.SexComboBox.Location = new System.Drawing.Point(424, 271);
             this.SexComboBox.Name = "SexComboBox";
             this.SexComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.SexComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -248,7 +250,7 @@ namespace ReservationSystem
             this.BirthdatePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BirthdatePicker.ForeColor = System.Drawing.Color.Black;
             this.BirthdatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BirthdatePicker.Location = new System.Drawing.Point(299, 289);
+            this.BirthdatePicker.Location = new System.Drawing.Point(299, 271);
             this.BirthdatePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.BirthdatePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.BirthdatePicker.Name = "BirthdatePicker";
@@ -267,11 +269,46 @@ namespace ReservationSystem
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(433, 318);
+            this.label2.Location = new System.Drawing.Point(433, 300);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Sex";
+            // 
+            // TypeComboBox
+            // 
+            this.TypeComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.TypeComboBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
+            this.TypeComboBox.BorderColor = System.Drawing.Color.Silver;
+            this.TypeComboBox.BorderSize = 0;
+            this.TypeComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TypeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TypeComboBox.FocusedColor = System.Drawing.Color.Empty;
+            this.TypeComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TypeComboBox.ForeColor = System.Drawing.Color.Black;
+            this.TypeComboBox.FormattingEnabled = true;
+            this.TypeComboBox.Items.AddRange(new object[] {
+            "Customer",
+            "Manager"});
+            this.TypeComboBox.Location = new System.Drawing.Point(300, 316);
+            this.TypeComboBox.Name = "TypeComboBox";
+            this.TypeComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.TypeComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.TypeComboBox.Radius = 10;
+            this.TypeComboBox.Size = new System.Drawing.Size(118, 26);
+            this.TypeComboBox.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label3.Location = new System.Drawing.Point(308, 345);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Type";
             // 
             // CreateAccountUC
             // 
@@ -279,7 +316,9 @@ namespace ReservationSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.BirthdatePicker);
+            this.Controls.Add(this.TypeComboBox);
             this.Controls.Add(this.SexComboBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CreateAccountButton);
@@ -290,7 +329,7 @@ namespace ReservationSystem
             this.Controls.Add(this.LastnameTextBox);
             this.Controls.Add(this.FirstnameTextBox);
             this.Name = "CreateAccountUC";
-            this.Size = new System.Drawing.Size(841, 452);
+            this.Size = new System.Drawing.Size(841, 419);
             this.Load += new System.EventHandler(this.CreateAccountUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -310,5 +349,7 @@ namespace ReservationSystem
         private Guna.UI.WinForms.GunaComboBox SexComboBox;
         private Guna.UI.WinForms.GunaDateTimePicker BirthdatePicker;
         private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaComboBox TypeComboBox;
+        private System.Windows.Forms.Label label3;
     }
 }

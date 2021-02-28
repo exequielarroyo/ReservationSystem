@@ -29,6 +29,7 @@ namespace ReservationSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +40,6 @@ namespace ReservationSystem
             this.RoomNumberTextbox = new Guna.UI.WinForms.GunaTextBox();
             this.PersonCountNumeric = new Guna.UI.WinForms.GunaNumeric();
             this.PriceTextBox = new Guna.UI.WinForms.GunaTextBox();
-            this.DetailsTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.BrowseButton = new Guna.UI2.WinForms.Guna2Button();
             this.RoomDataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -58,20 +58,22 @@ namespace ReservationSystem
             this.SaveButton = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteButton = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.UserProfilePictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.DetailsTextBox = new Guna.UI.WinForms.GunaTextBox();
             this.SignoutPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.SignOutButton = new Guna.UI.WinForms.GunaLabel();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomDataGrid)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserProfilePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.SignoutPanel.SuspendLayout();
@@ -111,7 +113,7 @@ namespace ReservationSystem
             this.StatusComboBox.Items.AddRange(new object[] {
             "Available",
             "Reserved"});
-            this.StatusComboBox.Location = new System.Drawing.Point(78, 159);
+            this.StatusComboBox.Location = new System.Drawing.Point(78, 303);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.StatusComboBox.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -153,10 +155,9 @@ namespace ReservationSystem
             this.PersonCountNumeric.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.PersonCountNumeric.ButtonForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.SetColumnSpan(this.PersonCountNumeric, 2);
-            this.PersonCountNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PersonCountNumeric.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PersonCountNumeric.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.PersonCountNumeric.Location = new System.Drawing.Point(78, 111);
+            this.PersonCountNumeric.Location = new System.Drawing.Point(78, 255);
             this.PersonCountNumeric.Maximum = ((long)(9999999));
             this.PersonCountNumeric.Minimum = ((long)(0));
             this.PersonCountNumeric.Name = "PersonCountNumeric";
@@ -174,46 +175,21 @@ namespace ReservationSystem
             this.PriceTextBox.BorderSize = 0;
             this.tableLayoutPanel1.SetColumnSpan(this.PriceTextBox, 2);
             this.PriceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PriceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PriceTextBox.FocusedBaseColor = System.Drawing.Color.White;
             this.PriceTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.PriceTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.PriceTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.PriceTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.PriceTextBox.Location = new System.Drawing.Point(78, 207);
+            this.PriceTextBox.Location = new System.Drawing.Point(78, 111);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.PasswordChar = '\0';
             this.PriceTextBox.Radius = 10;
             this.PriceTextBox.SelectedText = "";
-            this.PriceTextBox.Size = new System.Drawing.Size(194, 40);
+            this.PriceTextBox.Size = new System.Drawing.Size(194, 42);
             this.PriceTextBox.TabIndex = 3;
             this.PriceTextBox.Text = "0.00";
             this.PriceTextBox.TextOffsetX = 10;
-            // 
-            // DetailsTextBox
-            // 
-            this.DetailsTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.DetailsTextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
-            this.DetailsTextBox.BorderColor = System.Drawing.Color.Silver;
-            this.DetailsTextBox.BorderSize = 0;
-            this.tableLayoutPanel1.SetColumnSpan(this.DetailsTextBox, 2);
-            this.DetailsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DetailsTextBox.FocusedBaseColor = System.Drawing.Color.White;
-            this.DetailsTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DetailsTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.DetailsTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DetailsTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.DetailsTextBox.Location = new System.Drawing.Point(78, 255);
-            this.DetailsTextBox.MaxLength = 0;
-            this.DetailsTextBox.Multiline = true;
-            this.DetailsTextBox.Name = "DetailsTextBox";
-            this.DetailsTextBox.PasswordChar = '\0';
-            this.DetailsTextBox.Radius = 10;
-            this.tableLayoutPanel1.SetRowSpan(this.DetailsTextBox, 2);
-            this.DetailsTextBox.SelectedText = "";
-            this.DetailsTextBox.Size = new System.Drawing.Size(194, 164);
-            this.DetailsTextBox.TabIndex = 4;
-            this.DetailsTextBox.Text = "Details";
-            this.DetailsTextBox.TextOffsetX = 10;
             // 
             // tableLayoutPanel1
             // 
@@ -225,18 +201,18 @@ namespace ReservationSystem
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel1.Controls.Add(this.PersonCountNumeric, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.BrowseButton, 3, 8);
             this.tableLayoutPanel1.Controls.Add(this.RoomNumberTextbox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.RoomDataGrid, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.StatusComboBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.PriceTextBox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.gunaTextBox1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2PictureBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.PictureBox, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.DetailsTextBox, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PriceTextBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.DetailsTextBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PersonCountNumeric, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.StatusComboBox, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -256,8 +232,6 @@ namespace ReservationSystem
             // 
             // BrowseButton
             // 
-            this.BrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.BrowseButton.Animated = true;
             this.BrowseButton.BackColor = System.Drawing.Color.Transparent;
             this.BrowseButton.BorderRadius = 10;
@@ -277,7 +251,7 @@ namespace ReservationSystem
             this.BrowseButton.ShadowDecoration.Enabled = true;
             this.BrowseButton.ShadowDecoration.Parent = this.BrowseButton;
             this.BrowseButton.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.BrowseButton.Size = new System.Drawing.Size(231, 30);
+            this.BrowseButton.Size = new System.Drawing.Size(80, 30);
             this.BrowseButton.TabIndex = 16;
             this.BrowseButton.Text = "Open";
             this.BrowseButton.Click += new System.EventHandler(this.BrowseButton_Click);
@@ -543,8 +517,9 @@ namespace ReservationSystem
             // flowLayoutPanel2
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel2, 2);
-            this.flowLayoutPanel2.Controls.Add(this.guna2CirclePictureBox1);
+            this.flowLayoutPanel2.Controls.Add(this.UserProfilePictureBox);
             this.flowLayoutPanel2.Controls.Add(this.FirstNameTextBox);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(515, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -552,20 +527,20 @@ namespace ReservationSystem
             this.flowLayoutPanel2.Size = new System.Drawing.Size(282, 54);
             this.flowLayoutPanel2.TabIndex = 18;
             // 
-            // guna2CirclePictureBox1
+            // UserProfilePictureBox
             // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox1.Image = global::ReservationSystem.Properties.Resources.R659c780bf2f1f39858dd05c7e022ddb8;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(239, 13);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 15;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.FirstNameTextBox_Click);
+            this.UserProfilePictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UserProfilePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserProfilePictureBox.Image = global::ReservationSystem.Properties.Resources.R659c780bf2f1f39858dd05c7e022ddb8;
+            this.UserProfilePictureBox.Location = new System.Drawing.Point(239, 13);
+            this.UserProfilePictureBox.Name = "UserProfilePictureBox";
+            this.UserProfilePictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.UserProfilePictureBox.ShadowDecoration.Parent = this.UserProfilePictureBox;
+            this.UserProfilePictureBox.Size = new System.Drawing.Size(30, 30);
+            this.UserProfilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UserProfilePictureBox.TabIndex = 15;
+            this.UserProfilePictureBox.TabStop = false;
+            this.UserProfilePictureBox.Click += new System.EventHandler(this.FirstNameTextBox_Click);
             // 
             // gunaTextBox1
             // 
@@ -606,6 +581,7 @@ namespace ReservationSystem
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.PictureBox, 2);
             this.PictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PictureBox.Image = global::ReservationSystem.Properties.Resources.R659c780bf2f1f39858dd05c7e022ddb8;
             this.PictureBox.Location = new System.Drawing.Point(78, 351);
             this.PictureBox.Name = "PictureBox";
             this.tableLayoutPanel1.SetRowSpan(this.PictureBox, 2);
@@ -614,6 +590,33 @@ namespace ReservationSystem
             this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox.TabIndex = 20;
             this.PictureBox.TabStop = false;
+            // 
+            // DetailsTextBox
+            // 
+            this.DetailsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.DetailsTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.DetailsTextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
+            this.DetailsTextBox.BorderColor = System.Drawing.Color.Silver;
+            this.DetailsTextBox.BorderSize = 0;
+            this.tableLayoutPanel1.SetColumnSpan(this.DetailsTextBox, 2);
+            this.DetailsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.DetailsTextBox.FocusedBaseColor = System.Drawing.Color.White;
+            this.DetailsTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DetailsTextBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.DetailsTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DetailsTextBox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.DetailsTextBox.Location = new System.Drawing.Point(78, 159);
+            this.DetailsTextBox.Multiline = true;
+            this.DetailsTextBox.Name = "DetailsTextBox";
+            this.DetailsTextBox.PasswordChar = '\0';
+            this.DetailsTextBox.Radius = 10;
+            this.tableLayoutPanel1.SetRowSpan(this.DetailsTextBox, 2);
+            this.DetailsTextBox.SelectedText = "";
+            this.DetailsTextBox.Size = new System.Drawing.Size(194, 100);
+            this.DetailsTextBox.TabIndex = 3;
+            this.DetailsTextBox.Text = "Details";
+            this.DetailsTextBox.TextOffsetX = 10;
             // 
             // SignoutPanel
             // 
@@ -639,7 +642,7 @@ namespace ReservationSystem
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Image = global::ReservationSystem.Properties.Resources.icons8_sign_out_24;
+            this.gunaPictureBox2.Image = global::ReservationSystem.Properties.Resources.icons8_settings_24;
             this.gunaPictureBox2.Location = new System.Drawing.Point(9, 12);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
             this.gunaPictureBox2.Size = new System.Drawing.Size(15, 15);
@@ -692,6 +695,11 @@ namespace ReservationSystem
             this.SignOutButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SingleBitPerPixel;
             this.SignOutButton.Click += new System.EventHandler(this.SignOutButton_Click);
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 10;
+            this.gunaElipse1.TargetControl = this.RoomDataGrid;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,7 +718,7 @@ namespace ReservationSystem
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserProfilePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.SignoutPanel.ResumeLayout(false);
@@ -728,12 +736,11 @@ namespace ReservationSystem
         private Guna.UI.WinForms.GunaTextBox RoomNumberTextbox;
         private Guna.UI.WinForms.GunaNumeric PersonCountNumeric;
         private Guna.UI.WinForms.GunaTextBox PriceTextBox;
-        private Guna.UI.WinForms.GunaTextBox DetailsTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2DataGridView RoomDataGrid;
         private Guna.UI.WinForms.GunaLabel SignOutButton;
         private Guna.UI2.WinForms.Guna2Panel SignoutPanel;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox UserProfilePictureBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button AddButton;
         private Guna.UI2.WinForms.Guna2Button SaveButton;
@@ -756,5 +763,7 @@ namespace ReservationSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn OutDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn InDate;
         private System.Windows.Forms.DataGridViewImageColumn Picture;
+        private Guna.UI.WinForms.GunaTextBox DetailsTextBox;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

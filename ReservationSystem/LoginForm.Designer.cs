@@ -187,6 +187,7 @@ namespace ReservationSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(807, 424);
+            this.Controls.Add(this.createAccountUC1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterLink);
             this.Controls.Add(this.gunaTransfarantPictureBox1);
@@ -195,7 +196,6 @@ namespace ReservationSystem
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
-            this.Controls.Add(this.createAccountUC1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(823, 463);
             this.MinimumSize = new System.Drawing.Size(823, 463);

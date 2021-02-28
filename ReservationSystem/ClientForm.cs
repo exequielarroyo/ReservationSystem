@@ -20,11 +20,17 @@ namespace ReservationSystem
         }
 
 
-        private static int lenght = int.Parse(Database.GetRoomLenght().Rows[0][0].ToString());
+        private static int lenght = 0;
         List<Card> cards = new List<Card>(lenght);
         
         private void ClientForm_Load(object sender, EventArgs e)
         {
+            cards.Clear();
+            lenght = int.Parse(Database.GetRoomLenght().Rows[0][0].ToString());
+
+            FirstNameTextBox.Text = $"Hi {User.FirstName}";
+            UserProfilePictureBox.Image = User.Picture;
+
             DataTable rooms = new DataTable();
             rooms = Database.GetRoomData();
 

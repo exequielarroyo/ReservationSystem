@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ReservationSystem
 {
@@ -30,6 +31,7 @@ namespace ReservationSystem
         public static DateTime Birthdate { get; set; }
         public static string Email { get; set; }
         public static string Type { get; set; }
+        public static Image Picture { get; set; }
 
         public static bool GetUser(string username, string password)
         {
@@ -45,7 +47,7 @@ namespace ReservationSystem
             if (count == 1)
             {
                 MySqlDataAdapter adapterGetUser = new MySqlDataAdapter("SELECT user.userID, user.userName, user.userFirstName, user.userLastName, " +
-                    "user.userNumber, user.userSex, user.userBirthdate, user.userEmail, user.userType FROM user WHERE (user." +
+                    "user.userNumber, user.userSex, user.userBirthdate, user.userEmail, user.userType, user.userPicture FROM user WHERE (user." +
                     "userName = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userEmail = '" + username + "' AND user.userPas" +
                     "sword = '" + password + "') OR (user.userNumber = '" + username + "' AND user.userPassword = '" + password + "');", connection);
                 DataTable user = new DataTable();
@@ -60,6 +62,8 @@ namespace ReservationSystem
                 Birthdate = Convert.ToDateTime(user.Rows[0][6].ToString());
                 Email = user.Rows[0][7].ToString();
                 Type = user.Rows[0][8].ToString();
+                MemoryStream memoryStream = new MemoryStream((byte[])user.Rows[0][9]);
+                Picture = Image.FromStream(memoryStream);
 
                 return true;
             }

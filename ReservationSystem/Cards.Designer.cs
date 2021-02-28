@@ -35,24 +35,29 @@ namespace ReservationSystem
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BorderRadius = 15;
+            this.guna2Panel2.Controls.Add(this.gunaLabel2);
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel2.Controls.Add(this.gunaLabel4);
             this.guna2Panel2.Controls.Add(this.gunaLabel1);
+            this.guna2Panel2.Controls.Add(this.gunaLabel5);
             this.guna2Panel2.Controls.Add(this.gunaLabel3);
-            this.guna2Panel2.Controls.Add(this.gunaLabel2);
-            this.guna2Panel2.FillColor = System.Drawing.Color.Silver;
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(239)))), ((int)(((byte)(246)))));
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(0, 15, 50, 0);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(5, 15, 50, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(326, 86);
+            this.guna2Panel2.Size = new System.Drawing.Size(288, 86);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2PictureBox2
@@ -74,7 +79,7 @@ namespace ReservationSystem
             this.gunaLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(153, 56);
+            this.gunaLabel4.Location = new System.Drawing.Point(143, 27);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(42, 15);
             this.gunaLabel4.TabIndex = 0;
@@ -85,18 +90,19 @@ namespace ReservationSystem
             this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(156, 11);
+            this.gunaLabel1.Location = new System.Drawing.Point(249, 12);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(83, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(25, 15);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "RoomNumber";
+            this.gunaLabel1.Text = "000";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(156, 41);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(154, 12);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(33, 15);
             this.gunaLabel3.TabIndex = 0;
@@ -106,12 +112,41 @@ namespace ReservationSystem
             // 
             this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(156, 26);
+            this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gunaLabel2.Location = new System.Drawing.Point(212, 55);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(39, 15);
             this.gunaLabel2.TabIndex = 0;
             this.gunaLabel2.Text = "Status";
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2PictureBox5.AutoRoundedCorners = true;
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.BorderRadius = 11;
+            this.guna2PictureBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.guna2PictureBox5.Location = new System.Drawing.Point(207, 51);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.ShadowDecoration.Parent = this.guna2PictureBox5;
+            this.guna2PictureBox5.Size = new System.Drawing.Size(67, 24);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 3;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(117)))), ((int)(((byte)(237)))));
+            this.gunaLabel5.Location = new System.Drawing.Point(143, 12);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(14, 15);
+            this.gunaLabel5.TabIndex = 0;
+            this.gunaLabel5.Text = "₱";
             // 
             // Cards
             // 
@@ -119,11 +154,13 @@ namespace ReservationSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel2);
+            this.Margin = new System.Windows.Forms.Padding(15, 0, 0, 15);
             this.Name = "Cards";
-            this.Size = new System.Drawing.Size(326, 86);
+            this.Size = new System.Drawing.Size(288, 86);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +173,7 @@ namespace ReservationSystem
         public Guna.UI.WinForms.GunaLabel gunaLabel1;
         public Guna.UI.WinForms.GunaLabel gunaLabel3;
         public Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        public Guna.UI.WinForms.GunaLabel gunaLabel5;
     }
 }

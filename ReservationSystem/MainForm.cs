@@ -22,6 +22,7 @@ namespace ReservationSystem
         private void MainForm_Load(object sender, EventArgs e)
         {
             FirstNameTextBox.Text = $"Hi {User.FirstName}";
+            UserProfilePictureBox.Image = User.Picture;
 
             RoomDataGrid.DataSource = Database.GetRoomData();
         }
@@ -37,18 +38,11 @@ namespace ReservationSystem
             StatusComboBox.SelectedIndex = (status == "Available") ? 0 : 1;
             PriceTextBox.Text = RoomDataGrid.SelectedRows[0].Cells[4].Value.ToString();
             DetailsTextBox.Text = RoomDataGrid.SelectedRows[0].Cells[5].Value.ToString();
+            MemoryStream memoryStream = new MemoryStream((byte[])RoomDataGrid.SelectedRows[0].Cells[8].Value);
+            PictureBox.Image = Image.FromStream(memoryStream);
 
             SaveButton.Enabled = true;
             DeleteButton.Enabled = true;
-         
-            try
-            {
-                MemoryStream memoryStream = new MemoryStream((byte[])RoomDataGrid.SelectedRows[0].Cells[8].Value);
-                PictureBox.Image = Image.FromStream(memoryStream);
-            }
-            catch (Exception)
-            {
-            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -98,11 +92,18 @@ namespace ReservationSystem
             }
             if (count == 1)
             {
-                command.CommandText = "UPDATE room SET room.roomNumber = '" + int.Parse(RoomNumberTextbox.Text) + "', room.roomPersonCount = '" + int.Parse(PersonCountNumeric.Value.ToString()) + "', room.roomStatus= '" + StatusComboBox.Text + "', room.roomPrice=" + Convert.ToDecimal(PriceTextBox.Text) + ", room.roomDetails='" + DetailsTextBox.Text + "', room.roomPicture = @IMG WHERE room.roomID = '" + this.ID + "';";
+                command.CommandText = "UPDATE room SET room.roomNumber = '" + int.Parse(RoomNumberTextbox.Text) + "', " +
+                    "room.roomPersonCount = '" + int.Parse(PersonCountNumeric.Value.ToString()) + "', " +
+                    "room.roomStatus= '" + StatusComboBox.Text + "', " +
+                    "room.roomPrice=" + Convert.ToDecimal(PriceTextBox.Text) + ", " +
+                    "room.roomDetails='" + DetailsTextBox.Text + "', " +
+                    "room.roomPicture = @IMG WHERE room.roomID = '" + this.ID + "';";
             }
             else
-                command.CommandText = "INSERT INTO room(roomNumber, roomPersonCount, roomStatus, roomPrice, roomDetails, roomPicture)" + " VALUE('" + RoomNumberTextbox.Text + "', '" + PersonCountNumeric.Value + "', '" + StatusComboBox.Text + "', '" + Convert.ToDecimal(PriceTextBox.Text) + "', '" + DetailsTextBox.Text + "',@IMG); ";
-
+            {
+                command.CommandText = "INSERT INTO room(roomNumber, roomPersonCount, roomStatus, roomPrice, roomDetails, roomOutDate,roomInDate,roomPicture)" + " " +
+                    "VALUE('" + RoomNumberTextbox.Text + "', '" + PersonCountNumeric.Value + "', '" + StatusComboBox.Text + "', '" + Convert.ToDecimal(PriceTextBox.Text) + "', '" + DetailsTextBox.Text + "',NOW(),NOW(),@IMG); ";
+            }
             Database.Connection.Open();
             command.Parameters.Add("@IMG", MySqlDbType.LongBlob);
             command.Parameters["@IMG"].Value = image_to_byte;
