@@ -33,7 +33,11 @@ namespace ReservationSystem
 
         public static bool GetUser(string username, string password)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT COUNT(*) FROM user WHERE (user.userName = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userEmail = '" + username + "' AND user.userPassword = '" + password + "') OR (user.userNumber = '" + username + "' AND user.userPassword = '" + password + "');", connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT COUNT(*) FROM user" +
+                " WHERE (user.userName = '" + username + "' " +
+                "AND user.userPassword = '" + password + "') OR (user.userEmail = '" + username + "'" +
+                " AND user.userPassword = '" + password + "') " +
+                "OR (user.userNumber = '" + username + "' AND user.userPassword = '" + password + "');", connection);
             DataTable data = new DataTable();
             adapter.Fill(data);
             int count = int.Parse(data.Rows[0][0].ToString());

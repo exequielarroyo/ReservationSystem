@@ -20,11 +20,18 @@ namespace ReservationSystem
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
+            if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Manager")
             {
                 this.Hide();
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
+                this.Close();
+            }
+            else if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Customer")
+            {
+                this.Hide();
+                ClientForm clientForm = new ClientForm();
+                clientForm.ShowDialog();
                 this.Close();
             }
         }
@@ -38,11 +45,39 @@ namespace ReservationSystem
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text))
+                if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Manager")
                 {
                     this.Hide();
                     MainForm mainForm = new MainForm();
                     mainForm.ShowDialog();
+                    this.Close();
+                }
+                else if(User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Customer")
+                {
+                    this.Hide();
+                    ClientForm clientForm = new ClientForm();
+                    clientForm.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
+
+        private void UserNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Manager")
+                {
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.ShowDialog();
+                    this.Close();
+                }
+                else if (User.GetUser(UserNameTextBox.Text, PasswordTextBox.Text) && User.Type == "Customer")
+                {
+                    this.Hide();
+                    ClientForm clientForm = new ClientForm();
+                    clientForm.ShowDialog();
                     this.Close();
                 }
             }

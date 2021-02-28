@@ -25,5 +25,10 @@ namespace ReservationSystem
                 Database.Command("INSERT INTO USER(userName, userPassword,userFirstName, userLastName, userNumber, userSex, userBirthdate, userEmail, userType) VALUE('" + UserNameTextBox.Text + "', '" + PasswordTextBox.Text + "', '" + FirstnameTextBox.Text + "', '" + LastnameTextBox.Text + "', '" + NumberTextBox.Text + "', '" + SexComboBox.Text + "', '" + BirthdatePicker.Text + "', '" + EmailTextBox.Text + "', '" + "Customer" + "');");
             }
         }
+
+        private void CreateAccountUC_Load(object sender, EventArgs e)
+        {
+            BirthdatePicker.MaxDate = DateTime.Now;
+        }
     }
 }

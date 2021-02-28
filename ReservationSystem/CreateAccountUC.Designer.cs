@@ -291,6 +291,7 @@ namespace ReservationSystem
             this.Controls.Add(this.FirstnameTextBox);
             this.Name = "CreateAccountUC";
             this.Size = new System.Drawing.Size(841, 452);
+            this.Load += new System.EventHandler(this.CreateAccountUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
